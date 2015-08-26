@@ -1,0 +1,1 @@
+<li class="main-menu {dede:field.currentstyle/}"><a style="padding:0px" class="m" href="{dede:field.typedir/}">{dede:field.typename/}</a> </li>

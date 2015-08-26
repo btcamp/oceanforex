@@ -1,0 +1,53 @@
+<style>
+.quick LI .i00 {
+	BACKGROUND-IMAGE: url(/images/account.png);
+}
+</style>
+<div class="header"> 
+   <div class="head-layout clearfix"> 
+    <div class="logo"><a href="/" target="_self">{dede:sql sql='Select * from dede_addon_suipian where aid=1'}[field:content/]{/dede:sql}</a></div> 
+    <ul class="quick"> 
+    <li id="account"><a href="/open_account/login/" target="_self"><i class="i00"></i><span id='text'>Login</span></a> </li> 
+     <li><a href="/open_account/open_demoaccount/" target="_self"><i class="i01"></i>Demo Account</a> </li> 
+     <li><a href="/open_account/open_realaccount/" target="_self"><i class="i02"></i>Real Account</a> </li> 
+     <li><a href="/trading_platform/MT4/" target="_self"><i class="i03"></i>Download</a> </li> 
+     <li><a href="/about_us/contact_us/"><i class="i04"></i>Contacts</a> </li>
+    </ul>
+   </div>
+   <script type="text/javascript">
+  		var cookies = document.cookie;
+  		if(cookies.indexOf("islogin")>=0){
+  			$("#account").find("a").attr("href","/account/").find("#text").text("Account center");
+  		}else{
+  			$("#account").find("a").attr("href","/open_account/login/").find("#text").text("Login");
+  		}
+  </script>
+  </div> 
+  <div class="navbar"> 
+   <div class="nav-layout"> 
+    <ul class="nav"> 
+     <li class="main-menu current"><a style="padding: 0px"  class="m" href="/" target="_self">Home</a> </li> 
+	 {dede:channelArtlist typeid='1,2,3' currentstyle='current'}
+  	 <li class="main-menu {dede:field.currentstyle/}"><a style="padding:0px" class="m" href="{dede:field.typedir/}">{dede:field.typename/}</a> </li>
+	 {/dede:channelArtlist}
+     {dede:channelArtlist typeid='4,12,17,23' currentstyle='current'}
+      <li class="main-menu {dede:field.currentstyle/}"> <a style="padding:0px" class="m" href="{dede:field.typedir/}">{dede:field.typename/}<i></i></a> 
+      <ul class="sub-menu"> 
+       {dede:channel type='son'}
+		<li><a style="padding-left:0px 10px" href="[field:typelink /]" target="_self"><span>></span>[field:typename/]</a> </li>
+		{/dede:channel}
+      </ul></li>
+    {/dede:channelArtlist}
+    </ul> 
+    <div class="select-language" style="box-sizing: content-box;"> 
+     <div class="cur-language" style="box-sizing: content-box;">
+      <img alt="外汇语言" src="/templets/jinrong/imgcssjs/lg_02.png" /> 
+      <i></i>ENG
+     </div> 
+     <ul class="languages" style="box-sizing: content-box;"> 
+      <li><a target="_blank"><a href="http://www.ocnfx.com/"><img alt="" src="/templets/jinrong/imgcssjs/lg_01.png" /> 中文版</a> </li> 
+      <li><a target="_blank"><a href="http://www.oceanforex.com/"><img alt="" src="/templets/jinrong/imgcssjs/lg_02.png" /> English</a> </li>
+     </ul>
+    </div>
+   </div>
+  </div>

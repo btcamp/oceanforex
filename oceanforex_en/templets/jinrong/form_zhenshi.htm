@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+
+					<form action="/account/register.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="2" />
+						<input type="hidden" name="do" value="2" />
+						<div class="form-group">
+							<label for="youxiang" class="col-sm-4 control-label">E-mail：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="youxiang"
+									name='youxiang' placeholder="Please enter the E-mail.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mima" class="col-sm-4 control-label">Password：</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="mima"
+									name='mima' placeholder="Please enter the Password.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mimaqueren" class="col-sm-4 control-label">Confirm：</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="mimaqueren"
+									name='mimaqueren' placeholder="Please enter the Confirm Password.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mingzi" class="col-sm-4 control-label">Name：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mingzi"
+									name='mingzi' placeholder="Please enter the Name.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="国家" class="col-sm-4 control-label">Country：</label>
+							<div class="col-sm-8">
+								<select name='国家' id='国家' class="form-control">
+									<option value='CHINA'>CHINA</option>
+										<option value='USA'>USA</option>
+										<option value='JAPAN'>JAPAN</option>
+										<option value='KOREA'>KOREA</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dianhua" class="col-sm-4 control-label">Tel：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="dianhua"
+									name='dianhua' placeholder="Please enter the Tel.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dizhi" class="col-sm-4 control-label">Address：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="dizhi" name='dizhi'
+									placeholder="Please enter the Address.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Birthday：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="shengri"
+									name='shengri' placeholder="Please enter the Birthday.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Id is positive：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="idpositive"
+									name='idpositive' placeholder="Please select a positive id.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Id is opposite：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="idreverse"
+									name='idreverse' placeholder="Please select id is opposite.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Passport/green card/bank bills：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="bankbill"
+									name='bankbill' placeholder="Please select upload the last four months of class bank bills .">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(Stock)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" checked='checked' value="没有">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(Forex)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="waihui" checked='checked' value="None">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(Futures)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" checked='checked' value="None">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(Options)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" checked='checked' value="None">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(CFD)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="heyue" checked='checked' value="None">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Experience(Fund)：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="jijin" checked='checked' value="None">
+									None
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="Less than 1 year">
+									Less than 1 year
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="1~2years">
+									1~2years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="2~3years">
+									2~3years
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="3~5years">
+									3~5years
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Income：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="shouru" checked='checked'
+										value="< 10000">
+									&lt; 10000
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="10000~24999">
+									10000~24999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="25000~499999">
+									25000~499999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="50000~99999">
+									50000~99999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="100000+">
+									100000+
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">Net worth：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="zichan" checked='checked'
+										value="< 10000">
+									&lt; 10000
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="10000~24999">
+									10000~24999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="25000~499999">
+									25000~499999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="50000~99999">
+									50000~99999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="100000+">
+									100000+
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhidao" class="col-sm-4 control-label">How to know：</label>
+							<div class="col-sm-8">
+								<select name='zhidao' id='zhidao' class="form-control">
+									<option value='Search engine'>Search engine</option>
+										<option value='Web advertising'>Web advertising</option>
+										<option value='Television advertising'>Television advertising</option>
+										<option value='Agent'>Agent</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhidao" class="col-sm-4 control-label">Agent code：</label>
+							<div class="col-sm-8">
+								<input type='text' name='daima' id='daima' class="form-control"
+									placeholder='Please enter the agent code.' />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8" style="text-align:right">
+								<input type="hidden" name="dede_fields"
+								value="youxiang,text;mima,text;mimaqueren,text;mingzi,text;国家,select;dianhua,text;dizhi,text;shengri,text;gupiao,radio;waihui,radio;qihuo,radio;qiquan,radio;heyue,radio;jijin,radio;shouru,radio;zichan,radio;zhidao,select;daima,text" />
+							<input type="hidden" name="dede_fieldshash"
+								value="c54ba86442e08e3ebc8ef0803b25b212" />
+
+								<input type="reset" name="reset" value="Reset"
+									class='btn btn-danger' />
+								<input type="submit" id="btnsubmit" name="submit" value="Submit"
+									class='btn btn-primary' />
+								 
+							</div>
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>Our partner</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+			$("#youxiang").blur(function(){
+				if($("#youxiang").val()!=""){
+				$.get("/account/validateemail.php?email="+$("#youxiang").val(),{},function(data){
+					if(!data){
+						alert("Email has already been registered, please re-enter! ");
+						$("#youxiang").focus();
+					}
+				},"json");
+				}
+			});
+			$("#btnsubmit").click(function() {
+				var email = $("#youxiang").val();
+				var pwd = $("#mima").val();
+				var confirmpwd = $("#mimaqueren").val();
+				var name = $("#mingzi").val();
+				var phone = $("#dianhua").val();
+				var reg = /.+@.+\..+/;
+				var rnumber = /[0-9]+/;
+				var rchar = /[a-zA-Z]/;
+				if (email == "" || email == null) {
+					alert("The login email can not be empty.");
+					return false;
+				}
+				if (!reg.test(email)) {
+					alert("Email address format is not correct, please enter again .");
+					return false;
+				}
+				if (pwd == "" || pwd == null) {
+					alert("Password cannot be empty .");
+					return false;
+				}
+				if (!(rnumber.test(pwd) && rchar.test(pwd))) {
+					alert("The user password is too simple, password must consist of Numbers and letters .");
+					return false;
+				}
+
+				if (confirmpwd == "" || confirmpwd == null) {
+					alert("Confirm password cannot be empty .");
+					return false;
+				}
+				if (confirmpwd != pwd) {
+					alert("Two password, please enter again .");
+					return false;
+				}
+				if (name == "" || name == null) {
+					alert("User name cannot be empty .");
+					return false;
+				}
+				if (phone == "" || phone == null) {
+					alert("Telephone can not be empty .");
+					return false;
+				}
+				if(idpositive==""||idpositive==null){
+					alert("Please upload id is positive .");
+					return false;
+				}
+				if(idreverse==""||idreverse==null){
+					alert("Please upload id is opposite .");
+					return false;
+				}
+				if(bankbill==""||bankbill==null){
+					alert("Please upload the bank water or passport registered permanent residence this getting snapshots .");
+					return false;
+				}
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

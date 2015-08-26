@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+					<form action="/plus/diy.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="1" />
+						<input type="hidden" name="do" value="2" />
+						<div class="form-group">
+							<label for="mingzi" class="col-sm-3 control-label">Name：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="mingzi"
+									name='mingzi' placeholder="Please enter a name.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dizhi" class="col-sm-3 control-label">Address：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="dizhi" name='dizhi'
+									placeholder="Please enter a address.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="nianling" class="col-sm-3 control-label">Age：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="nianling"
+									name='nianling' placeholder="Please enter a age">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="nianling" class="col-sm-3 control-label">Age：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="nianling"
+									name='nianling' placeholder="Please enter a age">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-3 control-label">Income：</label>
+							<div class="col-sm-9">
+								<label class="radio-inline">
+									<input type="radio" name="shouru" checked='checked'
+										value="< 10000">
+									&lt; 10000
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="10000~24999">
+									10000~24999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="25000~499999">
+									25000~499999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="50000~99999">
+									50000~99999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="100000+">
+									100000+
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="youxiang" class="col-sm-3 control-label">E-mail：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="youxiang"
+									name='youxiang' placeholder="Please enter a e-mail">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shouji" class="col-sm-3 control-label">Tel：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="shouji"
+									name='shouji' placeholder="Please enter a tel">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="biaoti" class="col-sm-3 control-label">Title：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="biaoti"
+									name='biaoti' placeholder="Please enter a title">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="neirong" class="col-sm-3 control-label">Content：</label>
+							<div class="col-sm-9">
+								<textarea type="text" row='6' class="form-control" id="neirong"
+									name='neirong' placeholder="Please enter a content"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9" style="text-align: right">
+								<input type="hidden" name="dede_fields"
+									value="mingzi,text;dizhi,text;nianling,text;shouru,radio;youxiang,text;shouji,text" />
+								<input type="hidden" name="dede_fieldshash"
+									value="aa4a2f976d44deaa7767c5b543f6946b" />
+								<input type="reset" name="reset" value="Reset"
+									class='btn btn-danger' />
+								<input type="submit" name="submit" value="Submit"
+									class='btn btn-primary' />
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>Our Partner</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

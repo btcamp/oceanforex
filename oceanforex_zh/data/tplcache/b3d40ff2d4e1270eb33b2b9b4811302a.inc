@@ -1,0 +1,4 @@
+
+<field:content itemname="模板内容" autofield="1" type="text" isnull="true" default=""  maxlength="text" page="">
+</field:content>
+

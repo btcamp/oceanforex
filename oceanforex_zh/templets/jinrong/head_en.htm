@@ -1,0 +1,53 @@
+<div class="header"> 
+   <div class="head-layout clearfix"> 
+    <div class="logo"><a href="/en" target="_self">{dede:sql sql='Select * from dede_addon_suipian where aid=1'}[field:content/]{/dede:sql}</a></div> 
+    <ul class="quick"> 
+     <li><a href="/Open_Account/Open_Demo_Account" target="_self"><i class="i01"></i>Demo Account</a> </li> 
+     <li><a href="/Open_Account/Open_Real_Account" target="_self"><i class="i02"></i>Real Account</a> </li> 
+     <li><a href="#" target="_self"><i class="i03"></i>Download</a> </li> 
+     <li><a href="/About_us/Contact_us"><i class="i04"></i>Contacts</a> </li>
+    </ul>
+   </div>
+  </div> 
+  <div class="navbar"> 
+   <div class="nav-layout"> 
+    <ul class="nav"> 
+     <li class="main-menu current"><a class="m" href="/en" target="_self">Home</a> </li> 
+	 {dede:channelArtlist typeid='35,36,37' currentstyle='current'}
+  	 <li class="main-menu {dede:field.currentstyle/}"><a class="m" href="{dede:field.typedir/}">{dede:field.typename/}</a> </li>
+	 {/dede:channelArtlist}
+     {dede:channelArtlist typeid='38,45,47,52' currentstyle='current'}
+      <li class="main-menu {dede:field.currentstyle/}"> <a class="m" href="{dede:field.typedir/}">{dede:field.typename/}<i></i></a> 
+      <ul class="sub-menu"> 
+       {dede:channel type='son'}
+		<li><a href="[field:typelink /]" target="_self"><span>></span>[field:typename/]</a> </li>
+		{/dede:channel}
+      </ul></li>
+    {/dede:channelArtlist}
+    </ul> 
+    <div class="select-language"> 
+     <div class="cur-language">
+      <img alt="外汇语言" src="/templets/jinrong/imgcssjs/lg_01.png" /> 
+      <i></i>中文版 
+     </div> 
+     <ul class="languages"> 
+      <li><a target="_blank"><a href="/" target="_blank"><img alt="" src="/templets/jinrong/imgcssjs/lg_01.png" /> 中文版</a> </li> 
+      <li><a target="_blank"><a href="/en" target="_blank"><img alt="" src="/templets/jinrong/imgcssjs/lg_02.png" /> English</a> </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  
+  <style>
+  .leftmenu H2 {
+TEXT-INDENT: -9999em;
+MARGIN-BOTTOM: 16px;
+BACKGROUND: url(/templets/jinrong/imgcssjs/menu_tit_en.png) no-repeat 50px 0px;
+HEIGHT: 21px;
+OVERFLOW: hidden;
+}
+
+.leftmenu LI{
+PADDING-LEFT: 17px;
+}
+  </style>

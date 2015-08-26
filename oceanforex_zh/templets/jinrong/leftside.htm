@@ -1,0 +1,15 @@
+<div class="leftbar"> 
+     <div class="leftmenu"> 
+      <div class="inner"> 
+       <h2 style="margin-top:0px">栏目导航</h2> 
+       <ul> 
+        {dede:channel type='son'}
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="[field:typelink /]" target="_self">[field:typename/]</a></li>
+		{/dede:channel} 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="bn">
+      {dede:sql sql='Select * from dede_addon_suipian where aid=3'}[field:content/]{/dede:sql}
+     </div>
+    </div>

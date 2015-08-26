@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>{dede:global.cfg_webname_en/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" /> 
+  <link rel="stylesheet" type="text/css" href="/templets/jinrong/imgcssjs/common.css" /> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.min.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/global.js"></script> 
+  <!--[if IE 6]>
+
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+
+<![endif]--> 
+  
+ </head> 
+ <body>
+   <!--head_en.htm-->
+  {dede:include filename="head_en.htm" /}
+<!--head_en.htm end-->
+
+  <div class="wraper">
+   <!-- 幻灯片 --> 
+   <div class="home-slide">
+    <script src="/templets/jinrong/imgcssjs/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/templets/jinrong/imgcssjs/kinmaxshow.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#kinMaxShow").kinMaxShow();
+	});
+</script>
+<style type="text/css">
+	#kinMaxShow{display:none;}
+</style>
+
+
+
+<div id="kinMaxShow">
+
+		{dede:sql sql='Select * from dede_addon_suipian where aid=91'}[field:content/]{/dede:sql}
+			</div> 
+    
+     
+   </div> 
+    
+   <div class="layout"> 
+    <div class="titbar"> 
+     <h2><a>Rich trades around the world</a> <a href="/Forex_Trading">Forex</a> <a href="/Precious_Metal">Precious Metal</a> <a href="/Crude_Oil_Futures">Crude oil futures</a> </h2>
+    </div> 
+    <div class="area-01 clearfix"> 
+     <div class="col-item col-item-01"> 
+      <h3>Forex Trading</h3> 
+      <div class="info">
+      The foreign exchange market is the world's largest and most liquid market, with daily trading volume of $3.2 trillion, its main object is not only the ...
+      </div>
+      <a class="more" href="/Forex_Trading/">Read More</a> 
+     </div> 
+     <div class="col-item col-item-02"> 
+      <h3>Precious Metal</h3> 
+      <div class="info">
+       Gold is found early and make use of the metal. Because of the special and precious gold, enjoy other metal species unmatched reputation, its ...
+      </div>
+      <a class="more" href="/Precious_Metal/">Read More</a> 
+     </div> 
+     <div class="col-item col-item-03"> 
+      <h3>Oil Trading</h3> 
+      <div class="info">
+       Investment in energy products has become one of the most fast-growing market. The investment of oil and natural gas futures is into the high growth ...
+      </div>
+      <a class="more" href="/Crude_Oil_Futures/">Read More</a> 
+     </div>
+    </div>
+   </div> 
+   <div class="layout"> 
+    <div class="titbar"> 
+     <h2><a href="/About_us">About us</a> </h2>
+    </div> 
+    <div class="area-02 clearfix"> 
+     <div class="area-02-left"> 
+      <div class="txt">
+    {dede:sql sql='Select * from dede_addon_suipian where aid=92'}[field:content/]{/dede:sql} 
+      </div> 
+      <div class="con clearfix"> 
+       <div class="pic">
+        {dede:sql sql='Select * from dede_addon_suipian where aid=93'}[field:content/]{/dede:sql}
+       </div> 
+       {dede:sql sql='Select * from dede_addon_suipian where aid=94'}[field:content/]{/dede:sql}
+      </div> 
+      <div class="txt">
+     {dede:sql sql='Select * from dede_addon_suipian where aid=95'}[field:content/]{/dede:sql}
+      </div>
+     </div> 
+     <div class="bnlist"> 
+      {dede:sql sql='Select * from dede_addon_suipian where aid=96'}[field:content/]{/dede:sql}
+     </div>
+    </div> 
+    <div class="infobar clearfix">
+    {dede:sql sql='Select * from dede_addon_suipian where aid=97'}[field:content/]{/dede:sql}
+    </div>
+   </div> 
+   <div class="layout area-03 clearfix"> 
+    <div class="pd-info"> 
+     <h2>Price Difference</h2> 
+	 
+	 
+    {dede:sql sql='Select * from dede_addon_suipian where aid=98'}[field:content/]{/dede:sql}
+    </div> 
+    <div class="area-03-con"> 
+     <h2><a href="/Forex_Action/Forex_News">The market dynamic</a></h2> 
+     <ul class="clearfix"> 
+	 
+	 {dede:arclist typeid='47' limit='0,20'  titlelen='120' infolen=''  orderby='pubdate' }
+<li><a href="[field:arcurl/]" target="_blank" title="[field:title/]">>   [field:title function="cn_substr(@me,120)"/]</a></li>
+{/dede:arclist}
+	 
+     </ul>
+    </div>
+   </div> 
+    
+  </div> 
+  <div class="wraper-ft"></div> ﻿
+  {dede:include filename="footer_en.htm" /} 
+<script type="text/javascript" src="http://www.ddkefu.com/index.php/Icon/loadKefuIcon?siteString=683d6b89cebcd80d92bd8522ae73079b"></script>
+ </body>
+</html>

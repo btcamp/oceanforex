@@ -1,0 +1,4 @@
+INSERT INTO `dede_flink` VALUES('2','1','http://www.baidu.com','B','','','/templets/jinrong/imgcssjs/pn_03_hover.jpg','1226375403','1','2');
+INSERT INTO `dede_flink` VALUES('9','1','http://www.baidu.com','A','','','/templets/jinrong/imgcssjs/pn_01_hover.jpg','1227772717','1','2');
+INSERT INTO `dede_flink` VALUES('8','1','http://www.baidu.com','C','','','/templets/jinrong/imgcssjs/pn_02_hover.jpg','1227772703','1','2');
+INSERT INTO `dede_flink` VALUES('10','1','http://www.baidu.com','D','','','/templets/jinrong/imgcssjs/pn_01_hover.jpg','1227772703','1','2');

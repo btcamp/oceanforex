@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+<form action="/account/register.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="2" />
+						<input type="hidden" name="do" value="2" />
+						<div class="form-group">
+							<label for="youxiang" class="col-sm-4 control-label">登陆邮箱：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="youxiang"
+									name='youxiang' placeholder="请输入登陆邮箱">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mima" class="col-sm-4 control-label">密码：</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="mima"
+									name='mima' placeholder="请输入登陆密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mimaqueren" class="col-sm-4 control-label">确认密码：</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="mimaqueren"
+									name='mimaqueren' placeholder="请输入确认密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mingzi" class="col-sm-4 control-label">名字：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mingzi"
+									name='mingzi' placeholder="请输入姓名">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="国家" class="col-sm-4 control-label">国家：</label>
+							<div class="col-sm-8">
+								<select name='国家' id='国家' class="form-control">
+									<option value='中国'>中国</option>
+									<option value='美国'>美国</option>
+									<option value='日本'>日本</option>
+									<option value='韩国'>韩国</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dianhua" class="col-sm-4 control-label">电话：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="dianhua"
+									name='dianhua' placeholder="请输入电话">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dizhi" class="col-sm-4 control-label">地址：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="dizhi" name='dizhi'
+									placeholder="请输入地址">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">出生年月：</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="shengri"
+									name='shengri' placeholder="请输入地址">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">身份证正面：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="idpositive"
+									name='idpositive' placeholder="请选择身份证正面">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">身份证反面：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="idreverse"
+									name='idreverse' placeholder="请选择身份证反面">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">护照/户口本/银行账单：</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="bankbill"
+									name='bankbill' placeholder="请选择上传最近四个月类的银行账单">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-股票：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="gupiao" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-外汇：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="waihui" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="waihui" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-期货：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qihuo" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-期权：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="qiquan" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-合约：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="heyue" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="heyue" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">交易经验-基金：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="jijin" checked='checked' value="没有">
+									没有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="小于1年">
+									小于1年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="1~2年">
+									1~2年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="2~3年">
+									2~3年
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="jijin" value="3~5年">
+									3~5年
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">年收入：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="shouru" checked='checked'
+										value="< 10000">
+									< 10000
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="10000~24999">
+									10000~24999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="25000~499999">
+									25000~499999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="50000~99999">
+									50000~99999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="shouru" value="100000+">
+									100000+
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shengri" class="col-sm-4 control-label">净资产：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline">
+									<input type="radio" name="zichan" checked='checked'
+										value="< 10000">
+									< 10000
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="10000~24999">
+									10000~24999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="25000~499999">
+									25000~499999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="50000~99999">
+									50000~99999
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="zichan" value="100000+">
+									100000+
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhidao" class="col-sm-4 control-label">如何得知我们：</label>
+							<div class="col-sm-8">
+								<select name='zhidao' id='zhidao' class="form-control">
+									<option value='搜索引擎'>搜索引擎</option>
+									<option value='网页广告'>网页广告</option>
+									<option value='电视广告'>电视广告</option>
+									<option value='经纪人介绍'>经纪人介绍</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhidao" class="col-sm-4 control-label">经纪人代码：</label>
+							<div class="col-sm-8">
+								<input type='text' name='daima' id='daima' class="form-control"
+									placeholder='请输入经纪人代码' />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8" style="text-align:right">
+								<input type="hidden" name="dede_fields"
+									value="youxiang,text;mima,text;mimaqueren,text;mingzi,text;国家,select;dianhua,text;dizhi,text;shengri,text;gupiao,radio;waihui,radio;qihuo,radio;qiquan,radio;heyue,radio;jijin,radio;shouru,radio;zichan,radio;zhidao,select;daima,text" />
+								<input type="hidden" name="dede_fieldshash"
+									value="c54ba86442e08e3ebc8ef0803b25b212" />
+
+								<input type="reset" name="reset" value="重 置"
+									class='btn btn-danger' />
+								<input type="submit" id="btnsubmit" name="submit" value="提 交"
+									class='btn btn-primary' />
+								 
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>我们的伙伴</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+			$("#youxiang").blur(function(){
+				if($("#youxiang").val()!=""){
+				$.get("/account/validateemail.php?email="+$("#youxiang").val(),{},function(data){
+					if(!data){
+						alert("邮箱已经被注册，请重新填写！");
+						$("#youxiang").focus();
+					}
+				},"json");
+				}
+			});
+			$("#btnsubmit").click(function() {
+				var idpositive = $("#idpositive").val();
+				 var idreverse =  $("#idreverse").val();
+				 var bankbill = $("#bankbill").val();
+				var email = $("#youxiang").val();
+				var pwd = $("#mima").val();
+				var confirmpwd = $("#mimaqueren").val();
+				var name = $("#mingzi").val();
+				var phone = $("#dianhua").val();
+				var reg = /.+@.+\..+/;
+				var rnumber = /[0-9]+/;
+				var rchar = /[a-zA-Z]/;
+				if (email == "" || email == null) {
+					alert("登录邮箱不能为空");
+					return false;
+				}
+				if (!reg.test(email)) {
+					alert("邮箱格式不正确，请重新输入");
+					return false;
+				}
+				if (pwd == "" || pwd == null) {
+					alert("登录密码不能为空");
+					return false;
+				}
+				if (!(rnumber.test(pwd) && rchar.test(pwd))) {
+					alert("用户登陆密码过于简单，登陆密码必须由数字和字母组成");
+					return false;
+				}
+
+				if (confirmpwd == "" || confirmpwd == null) {
+					alert("确认密码不能为空");
+					return false;
+				}
+				if (confirmpwd != pwd) {
+					alert("两次密码输入不一致，请重新输入");
+					return false;
+				}
+				if (name == "" || name == null) {
+					alert("用户姓名不能为空");
+					return false;
+				}
+				if (phone == "" || phone == null) {
+					alert("用户电话不能为空");
+					return false;
+				}
+				if(idpositive==""||idpositive==null){
+					alert("请上传身份证正面照");
+					return false;
+				}
+				if(idreverse==""||idreverse==null){
+					alert("请上传身份证反面照");
+					return false;
+				}
+				if(bankbill==""||bankbill==null){
+					alert("请上传银行流水或者护照户口本快照");
+					return false;
+				}
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

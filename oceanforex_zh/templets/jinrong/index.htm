@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" /> 
+  <link rel="stylesheet" type="text/css" href="/templets/jinrong/imgcssjs/common.css" /> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.min.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/global.js"></script> 
+  <!--[if IE 6]>
+
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+
+<![endif]--> 
+  
+ </head> 
+ <body>
+   <!--head.htm-->
+  {dede:include filename="head.htm" /}
+<!--head.htm end-->
+
+  <div class="wraper">
+   <!-- 幻灯片 --> 
+   <div class="home-slide">
+    <script src="/templets/jinrong/imgcssjs/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/templets/jinrong/imgcssjs/kinmaxshow.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#kinMaxShow").kinMaxShow();
+	});
+</script>
+<style type="text/css">
+	#kinMaxShow{display:none;}
+</style>
+
+
+
+<div id="kinMaxShow">
+
+		{dede:sql sql='Select * from dede_addon_suipian where aid=54'}[field:content/]{/dede:sql}
+			</div> 
+    
+     
+   </div> 
+    
+   <div class="layout"> 
+    <div class="titbar"> 
+     <h2><a>全球丰富的交易品种</a> <a href="/waihuijiaoyi">外汇</a> <a href="/guijinshu">贵金属</a> <a href="/yuanyouqihuo">原油期货</a> </h2>
+    </div> 
+    <div class="area-01 clearfix"> 
+     <div class="col-item col-item-01"> 
+      <h3>外汇交易</h3> 
+      <div class="info">
+       外汇市场是世界上最大和最具流动性的市场，每日成交量由原来的3.2万亿美元，它的主要对象不仅是银行，还有个人外汇交易。
+      </div>
+      <a class="more" href="/waihuijiaoyi/">Read More</a> 
+     </div> 
+     <div class="col-item col-item-02"> 
+      <h3>贵金属交易</h3> 
+      <div class="info">
+       黄金是人类较早发现并利用的金属。由於黄金特殊和珍贵，享有其它金属品种无法比拟的盛誉，其显赫的地位近乎永恒。
+      </div>
+      <a class="more" href="/guijinshu/">Read More</a> 
+     </div> 
+     <div class="col-item col-item-03"> 
+      <h3>原油股指交易</h3> 
+      <div class="info">
+       投资能源产品已经成为最快速增长的市场之一。现在投资原油和天然气期货是进入这个高增长市场的最普及和最方便的方法...
+      </div>
+      <a class="more" href="/yuanyouqihuo/">Read More</a> 
+     </div>
+    </div>
+   </div> 
+   <div class="layout"> 
+    <div class="titbar"> 
+     <h2><a href="/guanyuwomen">关于我们</a> </h2>
+    </div> 
+    <div class="area-02 clearfix"> 
+     <div class="area-02-left"> 
+      <div class="txt">
+    {dede:sql sql='Select * from dede_addon_suipian where aid=46'}[field:content/]{/dede:sql} 
+      </div> 
+      <div class="con clearfix"> 
+       <div class="pic">
+        {dede:sql sql='Select * from dede_addon_suipian where aid=48'}[field:content/]{/dede:sql}
+       </div> 
+       {dede:sql sql='Select * from dede_addon_suipian where aid=47'}[field:content/]{/dede:sql}
+      </div> 
+      <div class="txt">
+     {dede:sql sql='Select * from dede_addon_suipian where aid=49'}[field:content/]{/dede:sql}
+      </div>
+     </div> 
+     <div class="bnlist"> 
+      {dede:sql sql='Select * from dede_addon_suipian where aid=45'}[field:content/]{/dede:sql}
+     </div>
+    </div> 
+    <div class="infobar clearfix">
+    {dede:sql sql='Select * from dede_addon_suipian where aid=44'}[field:content/]{/dede:sql}
+    </div>
+   </div> 
+   <div class="layout area-03 clearfix"> 
+    <div class="pd-info"> 
+     <h2>主要产品差价</h2> 
+	 
+	 
+    {dede:sql sql='Select * from dede_addon_suipian where aid=43'}[field:content/]{/dede:sql}
+    </div> 
+    <div class="area-03-con"> 
+     <h2><a href="/news/">市场动态</a></h2> 
+     <ul class="clearfix"> 
+	 
+	 {dede:arclist typeid='17' limit='0,20'  titlelen='120' infolen=''  orderby='pubdate' }
+<li><a href="[field:arcurl/]" target="_blank" title="[field:title/]">>   [field:title function="cn_substr(@me,120)"/]</a></li>
+{/dede:arclist}
+	 
+     </ul>
+    </div>
+   </div> 
+    
+  </div> 
+  <div class="wraper-ft"></div> ﻿
+  {dede:include filename="footer.htm" /} 
+<script type="text/javascript" src="http://www.ddkefu.com/index.php/Icon/loadKefuIcon?siteString=683d6b89cebcd80d92bd8522ae73079b"></script>
+ </body>
+</html>

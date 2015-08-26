@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>{dede:field.title/}_{dede:global.cfg_webname_en/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+  <link rel="stylesheet" type="text/css" href="/templets/jinrong/imgcssjs/common.css" /> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.min.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/global.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script> 
+  <!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]--> 
+ </head> 
+ <body>
+ <!--head_en.htm-->
+ {dede:include filename="head_en.htm" /}
+<!--head_en.htm end-->
+  <div class="wraper-hd"></div> 
+  <div class="wraper"> 
+   <div class="sub-banner"> 
+    {dede:sql sql='Select * from dede_addon_suipian where aid=2'}[field:content/]{/dede:sql} 
+   </div> 
+   <div class="main clearfix">
+    <!--leftside_en.htm-->
+{dede:include filename="leftside_en.htm" /}
+<!--leftside_en.htm end-->
+    <div class="article-detail"> 
+     <h1>{dede:field.typename/}</h1> 
+     <div class="article-content biaoge">
+	
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<table style="width:97%;" cellpadding="0" cellspacing="1">
+<tr>
+  <td align="right" valign="top" width="60">Name：</td>
+  <td><input type='text' name='mingzi' id='mingzi' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Name：</td>
+  <td><input type='text' name='dizhi' id='dizhi' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Age：</td>
+  <td><input type='text' name='nianling' id='nianling' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Annual income：</td>
+  <td><input type='radio' name='shouru' class='np' value='< 10000' checked>< 10000
+<input type='radio' name='shouru' class='np' value='10000~24999'>10000~24999
+<input type='radio' name='shouru' class='np' value='25000~499999'>25000~499999
+<input type='radio' name='shouru' class='np' value='50000~99999'>50000~99999
+<input type='radio' name='shouru' class='np' value='100000+'>100000+
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">E-mail：</td>
+  <td><input type='text' name='youxiang' id='youxiang' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Phone number：</td>
+  <td><input type='text' name='shouji' id='shouji' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Title：</td>
+  <td><input type='text' name='biaoti' id='biaoti' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">content：</td>
+  <td><textarea name='neirong' id='neirong' rows="6" style='width:90%;'></textarea>
+</td>
+</tr>
+<input type="hidden" name="dede_fields" value="mingzi,text;dizhi,text;nianling,text;shouru,radio;youxiang,text;shouji,text;biaoti,text;neirong,multitext" />
+<input type="hidden" name="dede_fieldshash" value="72dd6e45b0e98147a5d3eb5c548eb10b" /></table>
+<div align='center' style='height:30px;padding-top:10px;'>
+<input type="submit" name="submit" value="Submit" class='coolbg' />
+&nbsp;
+<input type="reset" name="reset" value="Reset" class='coolbg' />
+</div>
+</form>
+
+	 </div>
+    </div>
+    <!--rightside_en.htm-->
+{dede:include filename="rightside_en.htm" /}
+<!--rightside_en.htm end-->
+   </div>
+   <div class="layout parners clearfix"> 
+    <h4>Our partner</h4>
+    <a class="btn-prev" href="/#">prev</a> 
+    <a class="btn-next" href="/#">next</a> 
+    <div class="parners-list"> 
+     <ul class="clearfix"> 
+      {dede:sql sql='Select * from dede_flink'}
+	  <li><a href="[field:url/]" target="_blank"><img src="[field:logo/]" width="120" height="50" border="0" /><img src="[field:logo/]" width="120" height="50" border="0" class="hide" /></a> </li>
+	  {/dede:sql}</ul>
+    </div>
+   </div>
+  </div> 
+  <div class="wraper-ft"></div> ﻿
+  <!--footer_en.htm-->
+{dede:include filename="footer_en.htm" /}
+<!--footer_en.htm end--> 
+  <script type="text/javascript">
+//合作伙伴滚动
+$(function() {
+$(".parners-list").jCarouselLite({
+btnNext: ".btn-prev",
+btnPrev: ".btn-next",
+auto:4000,
+visible:5
+});
+});
+//侧栏滚动
+if ($(".main").height()>700){
+ $( document ).ready( function () {
+   $( '.scrollbar' ).scrollFollow( {
+   } );
+  } );
+}
+</script>  
+ </body>
+</html>

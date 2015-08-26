@@ -1,0 +1,2 @@
+INSERT INTO `dede_diyform1` VALUES('1','0','邓崛','啊啊啊啊啊啊啊啊啊','25','','ddd@qq.com','13888888888');
+INSERT INTO `dede_diyform1` VALUES('2','0','111111','23','111231','','','');

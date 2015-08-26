@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>外汇交易_OceanForex - Currency Trading Broker</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="/templets/jinrong/imgcssjs/common.css" /> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.min.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/global.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script> 
+  <!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]--> 
+ </head> 
+ <body>
+ <!--head.htm-->
+ <style>
+.quick LI .i00{
+	BACKGROUND-IMAGE: url(/images/account.png);
+}
+</style>
+<div class="header"> 
+   <div class="head-layout clearfix"> 
+    <div class="logo"><a href="/" target="_self"><img src="/templets/jinrong/imgcssjs/logo.png" /></a></div> 
+    <ul class="quick"> 
+    <li id="account"><a href="/kaishezhanghu/login/" target="_self"><i class="i00"></i><span id='text'>用户登录</span></a> </li> 
+     <li><a href="/kaishezhanghu/zhucemonizhanghao/" target="_self"><i class="i01"></i>模拟账户</a> </li> 
+     <li><a href="/kaishezhanghu/zhucezhenshizhanghu/" target="_self"><i class="i02"></i>真实账户</a> </li> 
+     <li><a href="/jiaoyipingtai/MT4jiaoyipingtai/" target="_self"><i class="i03"></i>软件下载</a> </li> 
+     <li><a href="/guanyuwomen/lianxiwomen"><i class="i04"></i>联络我们</a> </li>
+    </ul>
+   </div>
+   <script type="text/javascript">
+  		var cookies = document.cookie;
+  		if(cookies.indexOf("islogin")>=0){
+  			$("#account").find("a").attr("href","/account/").find("#text").text("用户中心");
+  		}else{
+  			$("#account").find("a").attr("href","/kaishezhanghu/login/").find("#text").text("用户登录");
+  		}
+  </script>
+  </div> 
+  <div class="navbar"> 
+   <div class="nav-layout"> 
+    <ul class="nav"> 
+     <li class="main-menu current"><a style="padding: 0px"  class="m" href="/" target="_self">主页</a> </li> 
+	 <li class="main-menu current"><a style="padding: 0px"  class="m" href="/waihuijiaoyi">外汇交易</a> </li><li class="main-menu "><a style="padding: 0px"  class="m" href="/guijinshu">贵金属</a> </li><li class="main-menu "><a style="padding: 0px"  class="m" href="/yuanyouqihuo">原油期货</a> </li>
+     <li class="main-menu "> <a style="padding: 0px"  class="m" href="/kaishezhanghu">开设账户<i></i></a> 
+      <ul class="sub-menu"> 
+       
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/zhanghukaisheliucheng/" target="_self"><span>></span>账户开设流程</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/jiaoyizhanghuleixing/" target="_self"><span>></span>交易帐户类型</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/zhucemonizhanghao/" target="_self"><span>></span>注册模拟账号</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/zhucezhenshizhanghu/" target="_self"><span>></span>注册真实账户</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/zhanghurujin/" target="_self"><span>></span>账户入金</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/kaishezhanghu/zhanghuchujin/" target="_self"><span>></span>账户出金</a> </li>
+		
+      </ul></li><li class="main-menu "> <a style="padding: 0px"  class="m" href="/jiaoyipingtai">交易平台<i></i></a> 
+      <ul class="sub-menu"> 
+       
+		<li><a  style="padding-left:0px 10px" href="/jiaoyipingtai/MT4jiaoyipingtai/" target="_self"><span>></span>MT4交易平台</a> </li>
+		
+      </ul></li><li class="main-menu "> <a style="padding: 0px"  class="m" href="/shichanghuodong">外汇交易<i></i></a> 
+      <ul class="sub-menu"> 
+       
+		<li><a  style="padding-left:0px 10px" href="/shichanghuodong/shichangjiaoyizixun/" target="_self"><span>></span>什么是外汇交易</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/shichanghuodong/xuexijiaoyizhishi/" target="_self"><span>></span>交易常用术语</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/shichanghuodong/zengjinjianglihuodong/" target="_self"><span>></span>常见订单类型</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/shichanghuodong/pingtaixinwengonggao/" target="_self"><span>></span>平台新闻公告</a> </li>
+		
+      </ul></li><li class="main-menu "> <a style="padding: 0px"  class="m" href="/guanyuwomen">关于我们<i></i></a> 
+      <ul class="sub-menu"> 
+       
+		<li><a  style="padding-left:0px 10px" href="/guanyuwomen/jiaoyiyoushi/" target="_self"><span>></span>我们的优势</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/guanyuwomen/zijinanquan/" target="_self"><span>></span>资金安全</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/guanyuwomen/fanxiqiancelue/" target="_self"><span>></span>反洗钱策略</a> </li>
+		
+		<li><a  style="padding-left:0px 10px" href="/guanyuwomen/lianxiwomen/" target="_self"><span>></span>联系我们</a> </li>
+		
+      </ul></li>
+    </ul> 
+     <div class="select-language" style="box-sizing: content-box;"> 
+     <div class="cur-language" style="box-sizing: content-box;">
+      <img alt="外汇语言" src="/templets/jinrong/imgcssjs/lg_02.png" /> 
+      <i></i>ENG
+     </div> 
+     <ul class="languages" style="box-sizing: content-box;"> 
+      <li><a target="_blank"><a href="http://www.ocnfx.com/"><img alt="" src="/templets/jinrong/imgcssjs/lg_01.png" /> 中文版</a> </li> 
+      <li><a target="_blank"><a href="http://www.oceanforex.com/"><img alt="" src="/templets/jinrong/imgcssjs/lg_02.png" /> English</a> </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+<!--head.htm end-->
+  <div class="wraper-hd"></div> 
+  <div class="wraper"> 
+   <div class="sub-banner"> 
+    <img alt="" src="/templets/jinrong/imgcssjs/accounts.jpg" /> 
+   </div> 
+   <div class="main clearfix">
+    <!--leftside.htm-->
+<div class="leftbar"> 
+     <div class="leftmenu"> 
+      <div class="inner"> 
+       <h2 style="margin-top:0px">栏目导航</h2> 
+       <ul> 
+        
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/waihuijiaoyi/" target="_self">外汇交易</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/guijinshu/" target="_self">贵金属</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/yuanyouqihuo/" target="_self">原油期货</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/kaishezhanghu/" target="_self">开设账户</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/jiaoyipingtai/" target="_self">交易平台</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/shichanghuodong/" target="_self">外汇交易</a></li>
+		
+		<li style="box-sizing: initial !important;-webkit-box-sizing: initial !important;"><a href="/guanyuwomen/" target="_self">关于我们</a></li>
+		 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="bn">
+      <a href="#"><img alt="外汇交易首选平台" src="/templets/jinrong/imgcssjs/bn_01.jpg" /></a>
+     </div>
+    </div>
+<!--leftside.htm end-->
+    <div class="article-detail"> 
+     <h1>外汇交易</h1> 
+     <div class="article-content">
+	  &nbsp;<span style="color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); line-height: 20.479999542236328px; font-family: AktivGroteskWeb, Oxygen, Arial, Helvetica, sans-serif; font-size: 13px;">外汇市场巨大的交易量使外汇成为全球流动性最强的商品。 除了偶尔有央行干预市场之外，外汇市场经常会被看作是最具完全竞争性的市场。</span>
+<div class="view-header" style="color: rgb(51, 51, 51); line-height: 19.200000762939453px; background-color: rgb(242, 242, 242); -webkit-font-smoothing: subpixel-antialiased; font-family: AktivGroteskWeb, Oxygen, Arial, Helvetica, sans-serif; font-size: 13px;">
+	<div class="view view-taxonomy-intro view-id-taxonomy_intro view-display-id-default view-dom-id-d0d2778962f8184572dce86070ef17d5" style="-webkit-font-smoothing: subpixel-antialiased;">
+		<div class="view-content" style="-webkit-font-smoothing: subpixel-antialiased;">
+			<div class="views-row views-row-1 views-row-odd views-row-first views-row-last" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<div class="views-field views-field-description" style="-webkit-font-smoothing: subpixel-antialiased;">
+					<div class="field-content" style="-webkit-font-smoothing: subpixel-antialiased;">
+						<p style="padding: 0px 0px 1em; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; line-height: 20.479999542236328px;">
+							与股票和期货等其他市场不同的是，每天24小时都可以进行外汇交易，一周五天。</p>
+						<p style="padding: 0px 0px 1em; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; line-height: 20.479999542236328px;">
+							欧福市场竭尽所能为我们的客户提供最好的交易条件，包括固定点差及个人账户经理。 我们的交易系统是目前市场上最完整及最具竞争力的。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="view-content" style="color: rgb(51, 51, 51); line-height: 19.200000762939453px; background-color: rgb(242, 242, 242); -webkit-font-smoothing: subpixel-antialiased; font-family: AktivGroteskWeb, Oxygen, Arial, Helvetica, sans-serif; font-size: 13px;">
+	<table class="views-table cols-5" style="-webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-spacing: 0px; border-collapse: collapse; margin-bottom: 1em;">
+		<thead style="-webkit-font-smoothing: subpixel-antialiased;">
+			<tr style="-webkit-font-smoothing: subpixel-antialiased;">
+				<th class="views-field views-field-title" style="padding: 8px 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; color: white; text-align: center; border-style: solid; border-color: rgb(226, 226, 226); min-height: 30px; font-weight: normal; background-image: url(http://china.onefinancialmarkets.com/themes/one/images/td-bg.jpg);">
+					產品</th>
+				<th class="views-field views-field-field-exchange" style="padding: 8px 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; color: white; text-align: center; border-style: solid; border-color: rgb(226, 226, 226); min-height: 30px; font-weight: normal; background-image: url(http://china.onefinancialmarkets.com/themes/one/images/td-bg.jpg);">
+					交易所</th>
+				<th class="views-field views-field-field-product-margin" style="padding: 8px 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; color: white; text-align: center; border-style: solid; border-color: rgb(226, 226, 226); min-height: 30px; font-weight: normal; background-image: url(http://china.onefinancialmarkets.com/themes/one/images/td-bg.jpg);">
+					保證金要求</th>
+				<th class="views-field views-field-field-product-spread" style="padding: 8px 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; color: white; text-align: center; border-style: solid; border-color: rgb(226, 226, 226); min-height: 30px; font-weight: normal; background-image: url(http://china.onefinancialmarkets.com/themes/one/images/td-bg.jpg);">
+					点差</th>
+				<th class="views-field views-field-field-trading-hours" style="padding: 8px 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; color: white; text-align: center; border-style: solid; border-color: rgb(226, 226, 226); min-height: 30px; font-weight: normal; background-image: url(http://china.onefinancialmarkets.com/themes/one/images/td-bg.jpg);">
+					交易時間</th>
+			</tr>
+		</thead>
+		<tbody style="-webkit-font-smoothing: subpixel-antialiased;">
+			<tr class="odd views-row-first" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdcnh" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">USD/CNH</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					4%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					15</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Daily 02:00 - 17:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdmxn" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">USD/MXN</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					4%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					75</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 &ndash; Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdpln" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">USD/PLN</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					4%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					40</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 &ndash; Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/cadjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">加元/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.9</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/cadchf" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">加元/瑞郎</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.9</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/zarusd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">南非兰特/美元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					100</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurcad" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/加元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.7</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/euraud" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/澳元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.9</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurchf" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/瑞士法郎</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.5</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurnzd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/纽元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					5.5</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurusd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/美元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.4</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurgbp" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧元/英镑</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.7</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/eurodollar" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">欧洲美元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					LIFFE</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.00%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Daily 00:00-22:00 Closes 21:00 Friday</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/audcad" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">澳元/加元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.9</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/audjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">澳元/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					3.5</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/audchf" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">澳元/瑞士法郎</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.1</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/audnzd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">澳元/纽元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					3.3</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/audusd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">澳元/美元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.4</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdcad" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元/加元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					3</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdzar" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元/南非兰特</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					80</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdsgd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元/新加坡元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					5</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.4</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdchf" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元/瑞郎</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.5</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/usdrub" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">美元兑卢布</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					4%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					200</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/gbpcad" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">英镑/加元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					9.7</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/gbpjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">英镑/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					4</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/gbpchf" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">英镑/瑞郎</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					7.7</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="odd" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/gbpusd" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">英镑/美元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					1.8</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00</td>
+			</tr>
+			<tr class="even views-row-last" style="-webkit-font-smoothing: subpixel-antialiased;">
+				<td class="views-field views-field-title" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; width: 120px; font-weight: bold; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					<a href="http://china.onefinancialmarkets.com/market-library/nzdjpy" style="padding: 0px; margin: 0px; vertical-align: baseline; color: rgb(33, 156, 224); text-decoration: none; -webkit-font-smoothing: subpixel-antialiased;">钮元/日元</a></td>
+				<td class="views-field views-field-field-exchange" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					N/A</td>
+				<td class="views-field views-field-field-product-margin" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					0.25%</td>
+				<td class="views-field views-field-field-product-spread" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					2.6</td>
+				<td class="views-field views-field-field-trading-hours" style="padding: 5px; margin: 0px; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased; border-style: solid; border-color: rgb(215, 215, 215); background-color: rgb(247, 247, 247);">
+					Sunday 22:00 - Friday 22:00<br />
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br />
+
+	 </div>
+    </div>
+    <!--rightside.htm-->
+<div class="rightbar scrollbar"> 
+     <div class="rbox"> 
+      <h3>Get Started Today!</h3> 
+      <div class="small-bn"> 
+       <a href="/kaishezhanghu/zhucemonizhanghao"><img src="/templets/jinrong/imgcssjs/small_bn_01.png" alt="申请外汇模拟账户" /><img class="hide" src="/templets/jinrong/imgcssjs/small_bn_01_hover.png" alt="开设模拟交易账户" /></a> 
+      </div> 
+      <div class="small-bn"> 
+       <a href="/kaishezhanghu/zhucezhenshizhanghu"><img src="/templets/jinrong/imgcssjs/small_bn_02.png" alt="开设真实交易帐户" /><img class="hide" src="/templets/jinrong/imgcssjs/small_bn_02_hover.png" alt="开设真实交易账户" /></a> 
+      </div> 
+     </div> 
+     <div class="contact-info"> 
+<dl>
+	<dt>
+		中文服务：</dt>
+	<dd>
+		客服邮箱：Service@oceanforex.com</dd>
+</dl>
+<dl>
+	<dd>
+		联系电话：400-082-9028</dd>
+</dl>
+<dl>
+	<dt>
+		新西兰总部：</dt>
+	<dd>
+		Level 15, BDO Building, 120 Albert Street, Auckland, 1010,New Zealand</dd>
+</dl>
+
+      <a class="btn-sv" href="/guanyuwomen/lianxiwomen">在线联络</a> 
+      <script src="/templets/jinrong/imgcssjs/LiveChat.js" type="text/javascript"></script> 
+     </div> 
+    </div>
+<!--rightside.htm end-->
+   </div>
+   <div class="layout parners clearfix"> 
+    <h4>我们的伙伴</h4>
+    <a class="btn-prev" href="/#">prev</a> 
+    <a class="btn-next" href="/#">next</a> 
+    <div class="parners-list"> 
+     <ul class="clearfix"> 
+      <li><a href="http://www.baidu.com" target="_blank"><img src="/templets/jinrong/imgcssjs/pn_03_hover.jpg" width="120" height="50" border="0" /><img src="/templets/jinrong/imgcssjs/pn_03_hover.jpg" width="120" height="50" border="0" class="hide" /></a> </li><li><a href="http://www.baidu.com" target="_blank"><img src="/templets/jinrong/imgcssjs/pn_01_hover.jpg" width="120" height="50" border="0" /><img src="/templets/jinrong/imgcssjs/pn_01_hover.jpg" width="120" height="50" border="0" class="hide" /></a> </li><li><a href="http://www.baidu.com" target="_blank"><img src="/templets/jinrong/imgcssjs/pn_02_hover.jpg" width="120" height="50" border="0" /><img src="/templets/jinrong/imgcssjs/pn_02_hover.jpg" width="120" height="50" border="0" class="hide" /></a> </li><li><a href="http://www.baidu.com" target="_blank"><img src="/templets/jinrong/imgcssjs/pn_01_hover.jpg" width="120" height="50" border="0" /><img src="/templets/jinrong/imgcssjs/pn_01_hover.jpg" width="120" height="50" border="0" class="hide" /></a> </li></ul>
+    </div>
+   </div>
+  </div> 
+  <div class="wraper-ft"></div> ﻿
+  <!--footer.htm-->
+<div class="footer"> 
+ <b>外汇交易</b>是具有较高风险的投资行为以杠杆场外交易即期外币合约进行投资和交易是投机性的,具有高度风险性,通常只适合于能够承担超过<br />
+其保证金存款损失风险的人士.鉴于存在这些风险,OceanForex外汇平台建议您在充分了解外汇交易的潜在风险程度后才决定是否进行外汇交易.同时场外外汇交易对于某些客户并不合适.<br />
+客户应该根据个人经验/投资目标/资金来源和其它相关情况仔细地考虑这类外汇交易是否适合您.您应该很清楚地认识到外汇交易的风险.<br />
+如果您有任何疑问，请不要犹豫，随时与我们联络，或者咨询您独立的财务顾问以获取建议。<br />
+
+  </div>
+<!--footer.htm end--> 
+  <script type="text/javascript">
+//合作伙伴滚动
+$(function() {
+$(".parners-list").jCarouselLite({
+btnNext: ".btn-prev",
+btnPrev: ".btn-next",
+auto:4000,
+visible:5
+});
+});
+//侧栏滚动
+if ($(".main").height()>700){
+ $( document ).ready( function () {
+   $( '.scrollbar' ).scrollFollow( {
+   } );
+  } );
+}
+</script>  
+ </body>
+</html>

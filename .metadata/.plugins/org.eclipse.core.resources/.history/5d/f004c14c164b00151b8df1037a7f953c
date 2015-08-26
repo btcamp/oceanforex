@@ -1,0 +1,53 @@
+<?php
+header("content-Type: text/html; charset=utf-8");
+$MD5key = "FoGdkOiz";
+$BillNo = $_REQUEST["BillNo"];
+$Amount = $_REQUEST["Amount"];
+$Succeed = $_REQUEST["Succeed"];
+$Result = $_REQUEST["Result"];
+$MD5info = $_REQUEST["MD5info"]; 
+$Remark = $_REQUEST["Remark"];
+$md5src = $BillNo.$Amount.$Succeed.$MD5key;
+$md5sign = strtoupper(md5($md5src));
+$accountid = $_SESSION['account'];
+if ($MD5info==$md5sign){
+	if ($Succeed=="88") {
+		//发送邮件通知
+		//1.发送给客户  2.发送给后台
+		$mailclient = new nusoap_client ( "http://localhost:8077/ApiService?wsdl", "wsdl" );
+		$tpl = mysql_query ( "SELECT content from dede_mailtpl where tplname='用户入金'" );
+		$accountresult = mysql_query ( "SELECT * from dede_diyform2 where id='$accountid'" );
+		$tplarray = mysql_fetch_array ( $tpl );
+		$account = mysql_fetch_array($accountresult);
+		$name = $account["mingzi"];
+		$email  = $account["youxiang"];
+		
+		
+		$content = str_replace ( "{name}",$name, $tplarray ["content"] );
+		$content = str_replace ( "{amount}", $Amount, $content );
+		$content = str_replace ( "{account}", $account["mt4account"], $content );
+		// 			print_r ( $tplarray );
+		// 发给用户的
+		$args = array (
+				"subject" => "用户入金",
+				"body" => $content,
+				"form" => "service@oceanforex.com",
+				"fromname" => "OceanForex Customer Service",
+				"to" => $email,
+				"toname" => $name,
+				"smtp" => "smtp.exmail.qq.com",
+				"formuser" => "service@oceanforex.com",
+				"frompwd" => "ocean58"
+		);
+		$mailclient->soap_defencoding = 'utf-8';
+		$mailclient->decode_utf8 = false;
+		$mailclient->xml_encoding = 'utf-8';
+		$mailmt4Result = $mailclient->call ( "SendMail", $args );
+		echo 'ok';
+	} else {
+		echo "fail";
+	}
+} else {
+	echo "error";
+}
+?>

@@ -1,0 +1,2 @@
+INSERT INTO `dede_diyform3` VALUES('1','0','123','123','123213','123','33','312');
+INSERT INTO `dede_diyform3` VALUES('2','0','111aaa','11','111','111','111','111');

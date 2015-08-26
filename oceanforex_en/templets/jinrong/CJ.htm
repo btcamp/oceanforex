@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+					<p>
+					<form action="/plus/diy.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="3" />
+						<input type="hidden" name="do" value="2" />
+						</p>
+						<div>
+							<span style="color: #000000;">
+								<span style="font-size: 18px;">
+									<strong>Instructions</strong>
+								</span>
+							</span>
+						</div>
+						<br>
+						<p>
+							Withdrawals are divided into t/t two ways of withdrawal,
+							withdrawal and/or please take a closer look at the instructions
+							below.
+							<br>
+							<br>
+							Pay attention to
+							<br>
+							1. For the IB commission withdrawals can only take a commission
+							every 2 weeks. Personal withdrawals without number.
+							<br>
+							2. In order to reduce the financial work, the lowest $50 each
+							time a withdrawal amount. (except for the last time a clearance
+							withdrawal)
+							<br>
+							3. Withdrawals to account time is usually 1-5 working days, the
+							fastest, 1 working day, generally 3 working days, the longest has
+							five working days to get to the bill. In case of more than five
+							days have not yet to account, please contact our customer service
+							to help you to query.
+						</p>
+
+						<div class="form-group">
+							<label for="mingzi" class="col-sm-3 control-label">Name：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="mingzi"
+									name='mingzi' placeholder="Please enter your name.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="haoma" class="col-sm-3 control-label">I.D.：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="haoma" name='haoma'
+									placeholder="Please enter your I.D.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="haoma" class="col-sm-3 control-label">Tel：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="shouji"
+									name='shouji' placeholder="Please enter your tel.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhanghao" class="col-sm-3 control-label">MT4Account：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="zhanghao"
+									name='zhanghao' placeholder="Please enter a MT4 account.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="jine" class="col-sm-3 control-label">Amount：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="jine" name='jine'
+									placeholder="Please enter the amount.">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="beizhu" class="col-sm-3 control-label">Remark：</label>
+							<div class="col-sm-9">
+								<textarea type="text" class="form-control" id="beizhu"
+									name='beizhu' rows="6"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9" style="text-align: right">
+								<input type="hidden" name="dede_fields"
+									value="mingzi,text;haoma,text;shouji,text;zhanghao,text;jine,text;beizhu,text" />
+								<input type="hidden" name="dede_fieldshash"
+									value="ea4585a7e8bd5f7ebef1064c115820c7" />
+								<input type="reset" name="reset" value="重 置"
+									class='btn btn-danger' />
+								<input type="submit" name="submit" value="提 交"
+									class='btn btn-primary' />
+							</div>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>Our Partner</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

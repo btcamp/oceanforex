@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>{dede:field.title/}_{dede:global.cfg_webname_en/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+  <link rel="stylesheet" type="text/css" href="/templets/jinrong/imgcssjs/common.css" /> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.min.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/global.js"></script> 
+  <script type="text/javascript" src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script> 
+  <!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]--> 
+ </head> 
+ <body>
+ <!--head_en.htm-->
+ {dede:include filename="head_en.htm" /}
+<!--head_en.htm end-->
+  <div class="wraper-hd"></div> 
+  <div class="wraper"> 
+   <div class="sub-banner"> 
+    {dede:sql sql='Select * from dede_addon_suipian where aid=2'}[field:content/]{/dede:sql} 
+   </div> 
+   <div class="main clearfix">
+    <!--leftside_en.htm-->
+{dede:include filename="leftside_en.htm" /}
+<!--leftside_en.htm end-->
+    <div class="article-detail"> 
+     <h1>{dede:field.typename/}</h1> 
+     <div class="article-content biaoge">
+	
+
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+<table style="width:97%;" cellpadding="0" cellspacing="1">
+<tr>
+  <td align="right" valign="top" width="120">E-mail：</td>
+  <td><input type='text' name='youxiang' id='youxiang' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Password：</td>
+  <td><input type='password' name='mima' value="" size="18" maxlength="18"id='mima' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Confirm：</td>
+  <td><input type='password' name='mimaqueren' value="" size="18" maxlength="18"id='mimaqueren' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Name：</td>
+  <td><input type='text' name='mingzi' id='mingzi' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Country：</td>
+  <td><select name='国家' style='width:150px'><option value='中国'>CHINA</option>
+<option value='美国'>USA</option>
+<option value='日本'>JAPAN</option>
+<option value='韩国'>KOREA</option>
+</select>
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Tel：</td>
+  <td><input type='text' name='dianhua' id='dianhua' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">ADD：</td>
+  <td><input type='text' name='dizhi' id='dizhi' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Birthday：</td>
+  <td><input type='text' name='shengri' id='shengri' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(Stock)：</td>
+  <td><input type='radio' name='gupiao' class='np' value='没有' checked>None 
+<input type='radio' name='gupiao' class='np' value='小于1年'>Less than 1 year
+<input type='radio' name='gupiao' class='np' value='1~2年'>1~2years 
+<input type='radio' name='gupiao' class='np' value='2~3年'>2~3years
+<input type='radio' name='gupiao' class='np' value='3~5年'>3~5years
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(Forex)：</td>
+  <td><input type='radio' name='waihui' class='np' value='没有' checked>None
+<input type='radio' name='waihui' class='np' value='小于1年'>Less than 1 year
+<input type='radio' name='waihui' class='np' value='1~2年'>1~2years 
+<input type='radio' name='waihui' class='np' value='2~3年'>2~3years
+<input type='radio' name='waihui' class='np' value='3~5年'>3~5years
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(Futures)：</td>
+  <td><input type='radio' name='qihuo' class='np' value='没有' checked>None
+<input type='radio' name='qihuo' class='np' value='小于1年'>Less than 1 year
+<input type='radio' name='qihuo' class='np' value='1~2年'>1~2years 
+<input type='radio' name='qihuo' class='np' value='2~3年'>2~3years
+<input type='radio' name='qihuo' class='np' value='3~5年'>3~5years
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(Options)：</td>
+  <td><input type='radio' name='qiquan' class='np' value='没有' checked>None
+<input type='radio' name='qiquan' class='np' value='小于1年'>Less than 1 year
+<input type='radio' name='qiquan' class='np' value='1~2年'>1~2years 
+<input type='radio' name='qiquan' class='np' value='2~3年'>2~3years
+<input type='radio' name='qiquan' class='np' value='3~5年'>3~5years
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(CFD)：</td>
+  <td><input type='radio' name='heyue' class='np' value='没有' checked>没有
+<input type='radio' name='heyue' class='np' value='小于1年'>小于1year
+<input type='radio' name='heyue' class='np' value='1~2年'>1~2year
+<input type='radio' name='heyue' class='np' value='2~3年'>2~3year
+<input type='radio' name='heyue' class='np' value='3~5年'>3~5year
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Experience(Fund)：</td>
+  <td><input type='radio' name='jijin' class='np' value='没有' checked>没有
+<input type='radio' name='jijin' class='np' value='小于1年'>小于1year
+<input type='radio' name='jijin' class='np' value='1~2年'>1~2year
+<input type='radio' name='jijin' class='np' value='2~3年'>2~3year
+<input type='radio' name='jijin' class='np' value='3~5年'>3~5year
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Annual income：</td>
+  <td><input type='radio' name='shouru' class='np' value='< 10000' checked>< 10000
+<input type='radio' name='shouru' class='np' value='10000~24999'>10000~24999
+<input type='radio' name='shouru' class='np' value='25000~499999'>25000~499999
+<input type='radio' name='shouru' class='np' value='50000~99999'>50000~99999
+<input type='radio' name='shouru' class='np' value='100000+'>100000+
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Net worth：</td>
+  <td><input type='radio' name='zichan' class='np' value='< 10000' checked>< 10000
+<input type='radio' name='zichan' class='np' value='10000~24999'>10000~24999
+<input type='radio' name='zichan' class='np' value='25000~499999'>25000~499999
+<input type='radio' name='zichan' class='np' value='50000~99999'>50000~99999
+<input type='radio' name='zichan' class='np' value='100000+'>100000+
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">How to know：</td>
+  <td><select name='zhidao' style='width:150px'><option value='搜索引擎'>Search engine</option>
+<option value='网页广告'>Web advertising</option>
+<option value='电视广告'>Television advertising</option>
+<option value='经纪人介绍'>Agent</option>
+</select>
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">Agent code：</td>
+  <td><input type='text' name='daima' id='daima' style='width:250px'  class='intxt' value='' />
+</td>
+</tr>
+<input type="hidden" name="dede_fields" value="youxiang,text;mima,text;mimaqueren,text;mingzi,text;国家,select;dianhua,text;dizhi,text;shengri,text;gupiao,radio;waihui,radio;qihuo,radio;qiquan,radio;heyue,radio;jijin,radio;shouru,radio;zichan,radio;zhidao,select;daima,text" />
+<input type="hidden" name="dede_fieldshash" value="c54ba86442e08e3ebc8ef0803b25b212" /></table>
+<div align='center' style='height:30px;padding-top:10px;'>
+<input type="submit" name="submit" value="Submit" class='coolbg' />
+ 
+<input type="reset" name="reset" value="Reset" class='coolbg' />
+</div>
+</form>
+
+
+	 </div>
+    </div>
+    <!--rightside_en.htm-->
+{dede:include filename="rightside_en.htm" /}
+<!--rightside_en.htm end-->
+   </div>
+   <div class="layout parners clearfix"> 
+    <h4>Our partner</h4>
+    <a class="btn-prev" href="/#">prev</a> 
+    <a class="btn-next" href="/#">next</a> 
+    <div class="parners-list"> 
+     <ul class="clearfix"> 
+      {dede:sql sql='Select * from dede_flink'}
+	  <li><a href="[field:url/]" target="_blank"><img src="[field:logo/]" width="120" height="50" border="0" /><img src="[field:logo/]" width="120" height="50" border="0" class="hide" /></a> </li>
+	  {/dede:sql}</ul>
+    </div>
+   </div>
+  </div> 
+  <div class="wraper-ft"></div> ﻿
+  <!--footer_en.htm-->
+{dede:include filename="footer_en.htm" /}
+<!--footer_en.htm end--> 
+  <script type="text/javascript">
+//合作伙伴滚动
+$(function() {
+$(".parners-list").jCarouselLite({
+btnNext: ".btn-prev",
+btnPrev: ".btn-next",
+auto:4000,
+visible:5
+});
+
+});
+
+//侧栏滚动
+if ($(".main").height()>700){
+ $( document ).ready( function () {
+   $( '.scrollbar' ).scrollFollow( {
+   } );
+  } );
+}
+</script>  
+ </body>
+</html>

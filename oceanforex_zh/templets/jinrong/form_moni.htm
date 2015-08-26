@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+					<form action="/plus/diy.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="1" />
+						<input type="hidden" name="do" value="2" />
+						<div class="form-group">
+							<label for="mingzi1" class="col-sm-3 control-label">您的名字：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="mingzi1"
+									name='mingzi1' placeholder="请输入名字">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dizhi1" class="col-sm-3 control-label">您的地址：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="dizhi1"
+									name='dizhi1' placeholder="请输入地址">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="nianling1" class="col-sm-3 control-label">您的年龄：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="nianling1"
+									name='nianling1' placeholder="请输入年龄">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="youxiang1" class="col-sm-3 control-label">您的邮箱：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="youxiang1"
+									name='youxiang1' placeholder="请输入邮箱">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="shouji1" class="col-sm-3 control-label">您的手机：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="shouji1"
+									name='shouji1' placeholder="请输入手机">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="biaoti1" class="col-sm-3 control-label">标题：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="biaoti1"
+									name='biaoti1' placeholder="请输入标题">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="neirong1" class="col-sm-3 control-label">内容：</label>
+							<div class="col-sm-9">
+								<textarea type="text" class="form-control" rows="6"
+									id="neirong1" name='neirong1' placeholder="请输入内容"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9" style="text-align: right">
+								<input type="hidden" name="dede_fields"
+									value="mingzi1,text;dizhi1,text;nianling1,text;youxiang1,text;shouji1,text;biaoti1,text;neirong1,text" />
+								<input type="hidden" name="dede_fieldshash"
+									value="7f025ac0a6241c36976efad1ed8e5e6c" />
+								<input type="reset" name="reset" value="重 置"
+									class='btn btn-danger' />
+                                                                <input type="submit" name="submit" value="提 交"
+									class='btn btn-primary' />
+							</div>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>我们的伙伴</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

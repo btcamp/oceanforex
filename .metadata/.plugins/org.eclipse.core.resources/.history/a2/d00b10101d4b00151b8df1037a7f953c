@@ -1,0 +1,26 @@
+﻿<?php
+
+
+header("content-Type: text/html; charset=utf-8");
+$MD5key = "FoGdkOiz";
+$BillNo = $_REQUEST["BillNo"];
+$Amount = $_REQUEST["Amount"];
+$Succeed = $_REQUEST["Succeed"];
+$Result = $_REQUEST["Result"];
+$MD5info = $_REQUEST["MD5info"]; 
+$Remark = $_REQUEST["Remark"];
+$md5src = $BillNo.$Amount.$Succeed.$MD5key;
+$md5sign = strtoupper(md5($md5src));
+$accountid = $_SESSION['account'];
+if ($MD5info==$md5sign){
+	if ($Succeed=="88") {
+		echo "支付成功".'<br>';
+		echo "订单号=".$BillNo.'<br>';
+		echo "金额=".$Amount.'<br>';
+	} else {
+		echo "支付失败（{$Succeed}）";
+	}
+} else {
+	echo "失败，信息可能被篡改";
+}
+?>

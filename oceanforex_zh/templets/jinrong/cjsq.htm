@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" type="text/css"
+	href="/templets/jinrong/imgcssjs/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/global.js"></script>
+<script type="text/javascript"
+	src="/templets/jinrong/imgcssjs/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/jinrong/imgcssjs/iepng.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--head.htm-->
+	{dede:include filename="head.htm" /}
+	<!--head.htm end-->
+	<div class="wraper-hd"></div>
+	<div class="wraper">
+		<div class="sub-banner">{dede:sql sql='Select * from
+			dede_addon_suipian where aid=2'}[field:content/]{/dede:sql}</div>
+		<div class="main clearfix">
+			<!--leftside.htm-->
+			{dede:include filename="leftside.htm" /}
+			<!--leftside.htm end-->
+			<div class="article-detail">
+				<h1>{dede:field.typename/}</h1>
+				<div class="article-content biaoge">
+
+					<p>
+					<form action="/plus/diy.php" enctype="multipart/form-data"
+						method="post" class="form-horizontal">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="3" />
+						<input type="hidden" name="do" value="2" />
+						</p>
+						<div>
+							<span style="color: #000000;">
+								<span style="font-size: 18px;">
+									<strong>取款说明</strong>
+								</span>
+							</span>
+						</div>
+						<br>
+						<p>
+							取款主要分为电汇取款和银联取款两种方式，请仔细查看下方说明。
+							<br>
+							<br>
+							注意：
+							<br>
+							1.  针对IB佣金取款，每2周最多只能取一次佣金。针对个人取款无次数限制。
+							<br>
+							2.  为了减少财务工作量，每次取款金额最低为50美金。（最后一次取款清仓除外）
+							<br>
+							3.
+							 取款到账时间一般为1-5个工作日，即最快1个工作日，一般3个工作日，最长也有5个工作日才能到账。如遇超过5个工作日尚未到账，请联系我们客服帮您查询。
+						</p>
+						<div class="form-group">
+							<label for="mingzi" class="col-sm-3 control-label">您的名字：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="mingzi"
+									name='mingzi' placeholder="请输入名字">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="haoma" class="col-sm-3 control-label">证件号码：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="haoma" name='haoma'
+									placeholder="请输入证件号码">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="haoma" class="col-sm-3 control-label">手机号：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="shouji"
+									name='shouji' placeholder="请输入手机号">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="zhanghao" class="col-sm-3 control-label">MT4账号：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="zhanghao"
+									name='zhanghao' placeholder="请输入MT4账号">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="jine" class="col-sm-3 control-label">出金金额：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="jine" name='jine'
+									placeholder="请输入金额">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="beizhu" class="col-sm-3 control-label">出金金额：</label>
+							<div class="col-sm-9">
+								<textarea type="text" class="form-control" id="beizhu"
+									name='beizhu' row=""></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9" style="text-align: right">
+								<input type="hidden" name="dede_fields"
+									value="mingzi,text;haoma,text;shouji,text;zhanghao,text;jine,text;beizhu,text" />
+								<input type="hidden" name="dede_fieldshash"
+									value="ea4585a7e8bd5f7ebef1064c115820c7" />
+								<input type="reset" name="reset" value="重 置"
+									class='btn btn-danger' />
+								<input type="submit" name="submit" value="提 交"
+									class='btn btn-primary' />
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<!--rightside.htm-->
+			{dede:include filename="rightside.htm" /}
+			<!--rightside.htm end-->
+		</div>
+		<div class="layout parners clearfix">
+			<h4>我们的伙伴</h4>
+			<a class="btn-prev" href="/#">prev</a>
+			<a class="btn-next" href="/#">next</a>
+			<div class="parners-list">
+				<ul class="clearfix">
+					{dede:sql sql='Select * from dede_flink'}
+					<li>
+						<a href="[field:url/]" target="_blank">
+							<img src="[field:logo/]" width="120" height="50" border="0" />
+							<img src="[field:logo/]" width="120" height="50" border="0"
+								class="hide" />
+						</a>
+					</li>
+					{/dede:sql}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wraper-ft"></div>
+	﻿
+	<!--footer.htm-->
+	{dede:include filename="footer.htm" /}
+	<!--footer.htm end-->
+	<script type="text/javascript">
+		//合作伙伴滚动
+		$(function() {
+			$(".parners-list").jCarouselLite({
+				btnNext : ".btn-prev",
+				btnPrev : ".btn-next",
+				auto : 4000,
+				visible : 5
+			});
+		});
+		//侧栏滚动
+		if ($(".main").height() > 700) {
+			$(document).ready(function() {
+				$('.scrollbar').scrollFollow({});
+			});
+		}
+	</script>
+</body>
+</html>

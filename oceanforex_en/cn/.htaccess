@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^cn\.oceanforex\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cn\.oceanforex\.com$
+RewriteRule ^/?$ "http\:\/\/www\.ocnfx\.com" [R=301,L]
+
