@@ -46,7 +46,7 @@ if ($MD5info==$md5sign){
 				"toname" => $name,
 				"smtp" => "smtp.exmail.qq.com",
 				"formuser" => "service@oceanforex.com",
-				"frompwd" => "ocean58"
+				"frompwd" => ""
 		);
 		$mailclient->soap_defencoding = 'utf-8';
 		$mailclient->decode_utf8 = false;
@@ -62,7 +62,7 @@ if ($MD5info==$md5sign){
 				"toname" => "客户入金通知",
 				"smtp" => "smtp.exmail.qq.com",
 				"formuser" => "service@oceanforex.com",
-				"frompwd" => "ocean58"
+				"frompwd" => ""
 		);
 		$mailmt4Result = $mailclient->call ( "SendMail", $argself );
 		
